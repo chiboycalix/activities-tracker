@@ -1,0 +1,37 @@
+{
+  "name": "track-activities-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "npm run clean && npm run migrate && babel -d ./build ./server",
+    "dev": "nodemon --exec babel-node server/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "test": "node test.js",
+    "format": "prettier --write \"./**/*.{js,json}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.14.2",
+    "babel-node": "0.0.1-security",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "winston": "^3.3.3"
+  }
+}
